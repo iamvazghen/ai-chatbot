@@ -25,8 +25,15 @@ export const myProvider = customProvider({
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'title-model': openai('gpt-4-turbo'),
     'block-model': openai('gpt-4o-mini'),
-    'chat-model-anthropic-sonnet': anthropic('claude-3-5-sonnet-20241022'),
-    'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
+    'chat-model-anthropic-sonnet': anthropic('claude-3.5-sonnet-20241022', {
+      maxTokens: 16000,
+      temperature: 0.7
+    }),
+    // Fix for Gemini model - add configuration and correct model name
+    'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro', {
+      maxTokens: 32000,
+      temperature: 0.7
+    }),
     'chat-model-mistral-large': mistral('mistral-large-latest'),
     'chat-model-cohere-command-r-plus': cohere('command-r-plus')
   },
