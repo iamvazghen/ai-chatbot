@@ -70,7 +70,7 @@ export const chatModels: Array<ChatModel> = [
   {
     id: 'mistral-large',
     name: 'Mistral Large',
-    description: 'Lates',
+    description: 'Latest model of Mistral',
   },
   {
     id: 'cohere-command',
@@ -85,6 +85,6 @@ export const chatModels: Array<ChatModel> = [
   {
     id: 'claude-sonnet',
     name: 'Claude Sonnet 3.5',
-    description: '',
+    description: 'Advanced Anthropic model',
   },
 ];
