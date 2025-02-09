@@ -1,5 +1,9 @@
 import { openai } from '@ai-sdk/openai';
 import { fireworks } from '@ai-sdk/fireworks';
+import { anthropic } from '@ai-sdk/anthropic';
+import { google } from '@ai-sdk/google';
+import { mistral } from '@ai-sdk/mistral';
+import { cohere } from '@ai-sdk/cohere';
 
 import {
   customProvider,
@@ -21,6 +25,18 @@ export const myProvider = customProvider({
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'title-model': openai('gpt-4-turbo'),
     'block-model': openai('gpt-4o-mini'),
+    // Anthropic
+    'chat-model-anthropic-opus': anthropic('claude-3-opus-20240229'),
+    'chat-model-anthropic-sonnet': anthropic('claude-3-sonnet-20240229'),
+
+    // Google
+    'chat-model-google-gemini-2-flash': google('gemini-2.0-flash-001'),
+    'chat-model-google-gemini-15': google('gemini-1.5-pro'),
+
+    'chat-model-mistral-large': mistral('mistral-large-latest'),
+
+    // Cohere
+    'chat-model-cohere-command-r-plus': cohere('command-r-plus')
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),
@@ -47,7 +63,7 @@ export const chatModels: Array<ChatModel> = [
   },
   {
     id: 'chat-model-reasoning',
-    name: 'Reasoning model',
+    name: 'DeepSeek R1',
     description: 'Uses advanced reasoning',
   },
   // New Fireworks model entries added below
@@ -61,4 +77,43 @@ export const chatModels: Array<ChatModel> = [
     name: 'Llama V3.1 405B',
     description: 'Large Llama 3.1 405B instruct model for complex tasks',
   },
+
+  // New entries
+  // Anthropic
+  {
+    id: 'chat-model-anthropic-opus',
+    name: 'Claude 3 Opus',
+    description: 'Largest model from Anthropic'
+  },
+  {
+    id: 'chat-model-anthropic-sonnet',
+    name: 'Claude 3 Sonnet',
+    description: 'Balanced intelligence and speed from Anthropic'
+  },
+
+  // Google
+  {
+    id: 'chat-model-google-gemini-2-flash',
+    name: 'Gemini Pro',
+    description: 'Google\'s general-purpose AI model'
+  },
+  {
+    id: 'chat-model-google-gemini-15',
+    name: 'Gemini 1.5 Pro',
+    description: 'Google\'s advanced model with long context'
+  },
+
+  // Mistral
+  {
+    id: 'chat-model-mistral-large',
+    name: 'Mistral Large',
+    description: 'Most capable Mistral model'
+  },
+
+  // Cohere
+  {
+    id: 'chat-model-cohere-command-r-plus',
+    name: 'Command R+',
+    description: 'Cohere\'s most powerful model'
+  }
 ];
