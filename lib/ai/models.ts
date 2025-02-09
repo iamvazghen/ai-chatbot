@@ -1,6 +1,5 @@
 import { openai } from '@ai-sdk/openai';
 import { fireworks } from '@ai-sdk/fireworks';
-import { anthropic } from '@ai-sdk/anthropic';
 import { google } from '@ai-sdk/google';
 import { mistral } from '@ai-sdk/mistral';
 import { cohere } from '@ai-sdk/cohere';
@@ -25,7 +24,6 @@ export const myProvider = customProvider({
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'title-model': openai('gpt-4-turbo'),
     'block-model': openai('gpt-4o-mini'),
-    'chat-model-anthropic-sonnet': anthropic('claude-3.5-sonnet-20241022'),
     'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
     'chat-model-mistral-large': mistral('mistral-large-latest'),
     'chat-model-cohere-command-r-plus': cohere('command-r-plus')
@@ -68,11 +66,6 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-llama-v3p1',
     name: 'Llama V3.1 405B',
     description: 'Large Llama 3.1 405B instruct model for complex tasks',
-  },
-  {
-    id: 'chat-model-anthropic-sonnet',
-    name: 'Claude 3 Sonnet',
-    description: 'Balanced intelligence and speed from Anthropic'
   },
   {
     id: 'chat-model-google-gemini-1.5-pro',
