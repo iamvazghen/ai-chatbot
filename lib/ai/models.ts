@@ -1,5 +1,6 @@
 import { openai } from '@ai-sdk/openai';
 import { fireworks } from '@ai-sdk/fireworks';
+
 import {
   customProvider,
   extractReasoningMiddleware,
@@ -16,6 +17,8 @@ export const myProvider = customProvider({
       model: fireworks('accounts/fireworks/models/deepseek-r1'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
+    'chat-model-deepseek-v3': fireworks('accounts/fireworks/models/deepseek-v3'),
+    'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'title-model': openai('gpt-4-turbo'),
     'block-model': openai('gpt-4o-mini'),
   },
@@ -46,5 +49,16 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-reasoning',
     name: 'Reasoning model',
     description: 'Uses advanced reasoning',
+  },
+  // New Fireworks model entries added below
+  {
+    id: 'chat-model-deepseek-v3',
+    name: 'DeepSeek V3',
+    description: 'Fireworks DeepSeek V3 model for advanced reasoning tasks',
+  },
+  {
+    id: 'chat-model-llama-v3p1',
+    name: 'Llama V3.1 405B',
+    description: 'Large Llama 3.1 405B instruct model for complex tasks',
   },
 ];
