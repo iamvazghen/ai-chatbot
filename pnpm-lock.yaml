@@ -8,9 +8,21 @@ importers:
 
   .:
     dependencies:
+      '@ai-sdk/anthropic':
+        specifier: ^1.1.6
+        version: 1.1.6(zod@3.23.8)
+      '@ai-sdk/cohere':
+        specifier: ^1.1.8
+        version: 1.1.8(zod@3.23.8)
       '@ai-sdk/fireworks':
         specifier: ^0.1.8
         version: 0.1.8(zod@3.23.8)
+      '@ai-sdk/google':
+        specifier: ^1.1.11
+        version: 1.1.11(zod@3.23.8)
+      '@ai-sdk/mistral':
+        specifier: ^1.1.7
+        version: 1.1.7(zod@3.23.8)
       '@ai-sdk/openai':
         specifier: 1.1.9
         version: 1.1.9(zod@3.23.8)
@@ -252,8 +264,32 @@ importers:
 
 packages:
 
+  '@ai-sdk/anthropic@1.1.6':
+    resolution: {integrity: sha512-4TZBg2VoU/F58DmnyfPPGU9wMUTwLP15XyAFSrUqk9sSdjszwcojXw3LE7YbxifZ+RK7wT7lTkuyK1k2UdfFng==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
+  '@ai-sdk/cohere@1.1.8':
+    resolution: {integrity: sha512-IUNmRrlYsGL2PICHYi5dh4xtflQP429FKRYtNgUfn3Pwpg5rf3kCYqnbEXGh6P1B0xUGtE31Xt4SnNyBXIw3YA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
   '@ai-sdk/fireworks@0.1.8':
     resolution: {integrity: sha512-3/xrROoWl3K6YA9VMej4p1M2eMS54xz7Z0x7QC7+q9ULLNhiZOpkbHVxDjsBayOlwiXH1MyZlKyDd4jJsgDzgg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
+  '@ai-sdk/google@1.1.11':
+    resolution: {integrity: sha512-EcK20MTA3zNJKNOo3r52Y0N960lGL6UxUimt13HFk2RJ4dXPMWl7ZhWFgjwFXwW2QwdSPKqlMHYjne3xvKTBcQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
+  '@ai-sdk/mistral@1.1.7':
+    resolution: {integrity: sha512-5YfNGD9zJ1/0bT2hEPLfKMFRZqP/cfaxJfyKILLuZYnduyfhmsxJroOPqOqmnJKxf1620Ja3hrhWO86DKeIZNw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -3774,9 +3810,33 @@ packages:
 
 snapshots:
 
+  '@ai-sdk/anthropic@1.1.6(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
+      zod: 3.23.8
+
+  '@ai-sdk/cohere@1.1.8(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
+      zod: 3.23.8
+
   '@ai-sdk/fireworks@0.1.8(zod@3.23.8)':
     dependencies:
       '@ai-sdk/openai-compatible': 0.1.8(zod@3.23.8)
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
+      zod: 3.23.8
+
+  '@ai-sdk/google@1.1.11(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
+      zod: 3.23.8
+
+  '@ai-sdk/mistral@1.1.7(zod@3.23.8)':
+    dependencies:
       '@ai-sdk/provider': 1.0.7
       '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
       zod: 3.23.8
@@ -6753,7 +6813,7 @@ snapshots:
 
   postcss@8.4.31:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
