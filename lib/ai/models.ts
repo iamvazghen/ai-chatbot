@@ -94,7 +94,7 @@ export const chatModels: Array<ChatModel> = [
   // Google
   {
     id: 'chat-model-google-gemini-2-flash',
-    name: 'Gemini Pro',
+    name: 'Gemini 2 Flash',
     description: 'Google\'s general-purpose AI model'
   },
   {
