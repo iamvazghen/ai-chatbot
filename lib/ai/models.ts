@@ -22,6 +22,7 @@ export const myProvider = customProvider({
     }),
     'chat-model-deepseek-v3': fireworks('accounts/fireworks/models/deepseek-v3'),
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
+    'chat-model-qwen-v2p5': fireworks('accounts/fireworks/models/qwen2p5-coder-32b-instruct'),
     'title-model': openai('gpt-4-turbo'),
     'block-model': openai('gpt-4o-mini'),
     'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
@@ -81,5 +82,10 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-cohere-command-r-plus',
     name: 'Command R+',
     description: 'Cohere\'s most powerful model'
+  },
+  {
+    id: 'chat-model-qwen-v2p5',
+    name: 'Qwen Coder 2.5',
+    description: 'The best coding model'
   }
 ];
