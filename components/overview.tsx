@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { MessageIcon, VercelIcon } from './icons';
+import { MessageIcon, BotIcon } from './icons';
 
 export const Overview = () => {
   return (
@@ -15,7 +15,7 @@ export const Overview = () => {
     >
       <div className="rounded-xl p-6 flex flex-col gap-8 leading-relaxed text-center max-w-xl">
         <p className="flex flex-row justify-center gap-4 items-center">
-          <VercelIcon size={32} />
+          <BotIcon size={32} />
           <span>+</span>
           <MessageIcon size={32} />
         </p>
