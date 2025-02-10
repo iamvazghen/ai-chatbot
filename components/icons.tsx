@@ -1,4 +1,4 @@
-export const BotIcon = () => {
+export const BotIcon = ({ size = 17 }) => {
   return (
     <svg
       height={size}
