@@ -17,8 +17,8 @@ export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': openai('o1-mini'),
-    'chat-model-large': openai('o3-mini'),
+    'chat-model-small': openai('gpt-4o-mini'),
+    'chat-model-large': openai('gpt-4o'),
     'chat-model-reasoning': wrapLanguageModel({
       model: fireworks('accounts/fireworks/models/deepseek-r1'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
@@ -26,13 +26,12 @@ export const myProvider = customProvider({
     'chat-model-deepseek-v3': fireworks('accounts/fireworks/models/deepseek-v3'),
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'chat-model-qwen-v2p5': fireworks('accounts/fireworks/models/qwen2p5-coder-32b-instruct'),
-    'title-model': openai('o1-mini'),
-    'block-model': openai('o3-mini'),
+    'title-model': openai('gpt-4o-mini'),
+    'block-model': openai('gpt-4o'),
     'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
     'chat-model-mistral-large': mistral('mistral-large-latest'),
     'chat-model-cohere-command-r-plus': cohere('command-r-plus'),
     'chat-model-anthropic-sonnet': anthropic('claude-3-5-sonnet-20241022'),
-    'chat-model-anthropic-opus': anthropic('claude-3-opus-20240229'),
     'chat-model-xai-grok': xai('grok-2-1212'),
     'chat-model-perplexity-sonar': perplexity('sonar-pro')
   },
@@ -51,13 +50,13 @@ interface ChatModel {
 export const chatModels: Array<ChatModel> = [
   {
     id: 'chat-model-small',
-    name: 'ChatGPT o1-mini',
-    description: 'Fastest OpenAI model for small and quick tasks',
+    name: 'ChatGPT 4o-mini',
+    description: 'Fastest OpenAI model designed for small and quick tasks',
   },
   {
     id: 'chat-model-large',
-    name: 'ChatGPT o3-mini',
-    description: 'Latest and most advanced model by OpenAI',
+    name: 'ChatGPT 4o',
+    description: 'Optimized model by OpenAI',
   },
   {
     id: 'chat-model-reasoning',
@@ -72,8 +71,8 @@ export const chatModels: Array<ChatModel> = [
   },
   {
     id: 'chat-model-llama-v3p1',
-    name: 'Llama V3.1 405B',
-    description: 'Llama model with most parameters',
+    name: 'Llama V3.1',
+    description: 'Llama model with 405B parameters',
   },
   {
     id: 'chat-model-google-gemini-1.5-pro',
@@ -99,11 +98,6 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-anthropic-sonnet',
     name: 'Claude Sonnet 3.5',
     description: 'Latest Anthropic model'
-  },
-  {
-    id: 'chat-model-anthropic-opus',
-    name: 'Claude Opus 3',
-    description: 'Largest Anthropic model'
   },
   {
     id: 'chat-model-perplexity-sonar',
