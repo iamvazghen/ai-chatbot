@@ -3,6 +3,7 @@ import { fireworks } from '@ai-sdk/fireworks';
 import { google } from '@ai-sdk/google';
 import { mistral } from '@ai-sdk/mistral';
 import { cohere } from '@ai-sdk/cohere';
+import { anthropic } from '@ai-sdk/anthropic';
 
 import {
   customProvider,
@@ -14,8 +15,8 @@ export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': openai('gpt-4o-mini'),
-    'chat-model-large': openai('gpt-4o'),
+    'chat-model-small': openai('o1-mini'),
+    'chat-model-large': openai('o3-mini'),
     'chat-model-reasoning': wrapLanguageModel({
       model: fireworks('accounts/fireworks/models/deepseek-r1'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
@@ -27,7 +28,9 @@ export const myProvider = customProvider({
     'block-model': openai('gpt-4o-mini'),
     'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
     'chat-model-mistral-large': mistral('mistral-large-latest'),
-    'chat-model-cohere-command-r-plus': cohere('command-r-plus')
+    'chat-model-cohere-command-r-plus': cohere('command-r-plus'),
+    'chat-model-anthropic-sonnet': anthropic('claude-3-5-sonnet-20241022'),
+    'chat-model-anthropic-opus': anthropic('claude-3-opus-20240229')
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),
@@ -44,13 +47,13 @@ interface ChatModel {
 export const chatModels: Array<ChatModel> = [
   {
     id: 'chat-model-small',
-    name: 'ChatGPT 4o mini',
-    description: 'Small model for fast, lightweight tasks',
+    name: 'ChatGPT o1-mini',
+    description: 'Fastest OpenAI model for small and quick tasks',
   },
   {
     id: 'chat-model-large',
-    name: 'ChatGPT 4o',
-    description: 'Large model for complex, multi-step tasks',
+    name: 'ChatGPT o3-mini',
+    description: 'Latest and most advanced model by OpenAI',
   },
   {
     id: 'chat-model-reasoning',
@@ -66,12 +69,12 @@ export const chatModels: Array<ChatModel> = [
   {
     id: 'chat-model-llama-v3p1',
     name: 'Llama V3.1 405B',
-    description: 'Large Llama 3.1 405B instruct model for complex tasks',
+    description: 'Llama model with most parameters',
   },
   {
     id: 'chat-model-google-gemini-1.5-pro',
     name: 'Gemini 1.5 Pro',
-    description: 'Google\'s advanced model with long context'
+    description: 'The model with longest context'
   },
   {
     id: 'chat-model-mistral-large',
@@ -87,5 +90,15 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-qwen-v2p5',
     name: 'Qwen Coder 2.5',
     description: 'The best coding model'
+  },
+  {
+    id: 'chat-model-anthropic-sonnet',
+    name: 'Claude Sonnet 3.5',
+    description: 'Latest Anthropic model'
+  },
+  {
+    id: 'chat-model-anthropic-opus',
+    name: 'Claude Opus 3',
+    description: 'Largest Anthropic model'
   }
 ];
