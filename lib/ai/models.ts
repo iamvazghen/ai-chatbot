@@ -5,7 +5,6 @@ import { mistral } from '@ai-sdk/mistral';
 import { cohere } from '@ai-sdk/cohere';
 import { anthropic } from '@ai-sdk/anthropic';
 import { xai } from '@ai-sdk/xai';
-import { perplexity } from '@ai-sdk/perplexity';
 
 import {
   customProvider,
@@ -33,7 +32,6 @@ export const myProvider = customProvider({
     'chat-model-cohere-command-r-plus': cohere('command-r-plus'),
     'chat-model-anthropic-sonnet': anthropic('claude-3-5-sonnet-20241022'),
     'chat-model-xai-grok': xai('grok-2-1212'),
-    'chat-model-perplexity-sonar': perplexity('sonar-pro')
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),
@@ -98,11 +96,6 @@ export const chatModels: Array<ChatModel> = [
     id: 'chat-model-anthropic-sonnet',
     name: 'Claude Sonnet 3.5',
     description: 'Latest Anthropic model'
-  },
-  {
-    id: 'chat-model-perplexity-sonar',
-    name: 'Sonar Pro',
-    description: 'Latest search engine by Perplexity'
   },
   {
     id: 'chat-model-xai-grok',
