@@ -66,12 +66,7 @@ export async function POST(request: Request) {
         model: myProvider.languageModel(selectedChatModel),
         system: systemPrompt({ selectedChatModel }),
         messages,
-        // Increased maxSteps to allow for more complex interactions
         maxSteps: 10,
-        // Added maxTokens configuration
-        experimental_maxTokens: 4000,
-        // Added temperature for more detailed responses
-        experimental_temperature: 0.7,
         experimental_activeTools:
           selectedChatModel === 'chat-model-reasoning'
             ? []
@@ -81,7 +76,6 @@ export async function POST(request: Request) {
                 'updateDocument',
                 'requestSuggestions',
               ],
-        // Adjusted chunking for smoother streaming of longer responses
         experimental_transform: smoothStream({ 
           chunking: 'word',
           chunkSize: 10,
