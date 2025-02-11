@@ -26,6 +26,12 @@ importers:
       '@ai-sdk/openai':
         specifier: 1.1.9
         version: 1.1.9(zod@3.23.8)
+      '@ai-sdk/perplexity':
+        specifier: ^0.0.7
+        version: 0.0.7(zod@3.23.8)
+      '@ai-sdk/xai':
+        specifier: ^1.1.8
+        version: 1.1.8(zod@3.23.8)
       '@codemirror/lang-javascript':
         specifier: ^6.2.2
         version: 6.2.2
@@ -306,6 +312,12 @@ packages:
     peerDependencies:
       zod: ^3.0.0
 
+  '@ai-sdk/perplexity@0.0.7':
+    resolution: {integrity: sha512-PmLBRgEIyxVk0vmHDTb2e5AJnSmSBd3CezGTJBq0Wc3dm8VLyXreex2pLYiB1cDzd6j+vZsWbhHcvalpOoSiTg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
   '@ai-sdk/provider-utils@2.1.6':
     resolution: {integrity: sha512-Pfyaj0QZS22qyVn5Iz7IXcJ8nKIKlu2MeSAdKJzTwkAks7zdLaKVB+396Rqcp1bfQnxl7vaduQVMQiXUrgK8Gw==}
     engines: {node: '>=18'}
@@ -339,6 +351,12 @@ packages:
     peerDependenciesMeta:
       zod:
         optional: true
+
+  '@ai-sdk/xai@1.1.8':
+    resolution: {integrity: sha512-2ezkPMBSfqZySYbXZDa1dCq3c1RV5ZXcwkWIB18qpmwGaRCxdjzBIyZHPOH2FeOLQplZnGC0VfxZcOAbvWhV0Q==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -3853,6 +3871,13 @@ snapshots:
       '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
       zod: 3.23.8
 
+  '@ai-sdk/perplexity@0.0.7(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/openai-compatible': 0.1.8(zod@3.23.8)
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
+      zod: 3.23.8
+
   '@ai-sdk/provider-utils@2.1.6(zod@3.23.8)':
     dependencies:
       '@ai-sdk/provider': 1.0.7
@@ -3882,6 +3907,13 @@ snapshots:
       '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
       zod-to-json-schema: 3.24.1(zod@3.23.8)
     optionalDependencies:
+      zod: 3.23.8
+
+  '@ai-sdk/xai@1.1.8(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/openai-compatible': 0.1.8(zod@3.23.8)
+      '@ai-sdk/provider': 1.0.7
+      '@ai-sdk/provider-utils': 2.1.6(zod@3.23.8)
       zod: 3.23.8
 
   '@alloc/quick-lru@5.2.0': {}
