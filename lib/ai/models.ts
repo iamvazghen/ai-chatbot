@@ -26,15 +26,15 @@ export const myProvider = customProvider({
     'chat-model-deepseek-v3': fireworks('accounts/fireworks/models/deepseek-v3'),
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'chat-model-qwen-v2p5': fireworks('accounts/fireworks/models/qwen2p5-coder-32b-instruct'),
-    'title-model': openai('gpt-4-turbo'),
-    'block-model': openai('gpt-4o-mini'),
+    'title-model': openai('o1-mini'),
+    'block-model': openai('o3-mini'),
     'chat-model-google-gemini-1.5-pro': google('gemini-1.5-pro'),
     'chat-model-mistral-large': mistral('mistral-large-latest'),
     'chat-model-cohere-command-r-plus': cohere('command-r-plus'),
     'chat-model-anthropic-sonnet': anthropic('claude-3-5-sonnet-20241022'),
     'chat-model-anthropic-opus': anthropic('claude-3-opus-20240229'),
-    'chat-model-xai-grok': anthropic('grok-2-1212'),
-    'chat-model-perplexity-sonar': anthropic('sonar-pro')
+    'chat-model-xai-grok': xai('grok-2-1212'),
+    'chat-model-perplexity-sonar': perplexity('sonar-pro')
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),
