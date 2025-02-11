@@ -26,8 +26,7 @@ import { updateDocument } from '@/lib/ai/tools/update-document';
 import { requestSuggestions } from '@/lib/ai/tools/request-suggestions';
 import { getWeather } from '@/lib/ai/tools/get-weather';
 
-// Increased from 60 to allow for longer processing time
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 export async function POST(request: Request) {
   const {
@@ -66,7 +65,7 @@ export async function POST(request: Request) {
         model: myProvider.languageModel(selectedChatModel),
         system: systemPrompt({ selectedChatModel }),
         messages,
-        maxSteps: 10,
+        maxSteps: 5,
         experimental_activeTools:
           selectedChatModel === 'chat-model-reasoning'
             ? []
@@ -76,11 +75,7 @@ export async function POST(request: Request) {
                 'updateDocument',
                 'requestSuggestions',
               ],
-        experimental_transform: smoothStream({ 
-          chunking: 'word',
-          chunkSize: 10,
-          delay: 0
-        }),
+        experimental_transform: smoothStream({ chunking: 'word' }),
         experimental_generateMessageId: generateUUID,
         tools: {
           getWeather,
