@@ -5,6 +5,7 @@ import { mistral } from '@ai-sdk/mistral';
 import { cohere } from '@ai-sdk/cohere';
 import { anthropic } from '@ai-sdk/anthropic';
 import { xai } from '@ai-sdk/xai';
+import { deepseek } from '@ai-sdk/deepseek';
 
 import {
   customProvider,
@@ -22,7 +23,7 @@ export const myProvider = customProvider({
       model: fireworks('accounts/fireworks/models/deepseek-r1'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
-    'chat-model-deepseek-v3': fireworks('accounts/fireworks/models/deepseek-v3'),
+    'chat-model-deepseek-v3': deepseek('deepseek-chat'),
     'chat-model-llama-v3p1': fireworks('accounts/fireworks/models/llama-v3p1-405b-instruct'),
     'chat-model-qwen-v2p5': fireworks('accounts/fireworks/models/qwen2p5-coder-32b-instruct'),
     'title-model': openai('gpt-4o-mini'),
