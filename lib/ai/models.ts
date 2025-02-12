@@ -61,7 +61,6 @@ export const chatModels: Array<ChatModel> = [
     name: 'DeepSeek R1',
     description: 'Uses advanced reasoning',
   },
-  // New Fireworks model entries added below
   {
     id: 'chat-model-deepseek-v3',
     name: 'DeepSeek V3',
