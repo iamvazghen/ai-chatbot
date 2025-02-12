@@ -65,7 +65,7 @@ export const chatModels: Array<ChatModel> = [
   {
     id: 'chat-model-deepseek-v3',
     name: 'DeepSeek V3',
-    description: 'Fireworks DeepSeek V3 model for advanced reasoning tasks',
+    description: 'Latest DeepSeek model, perfect for not to complex tasks',
   },
   {
     id: 'chat-model-llama-v3p1',
