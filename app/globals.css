@@ -104,17 +104,18 @@
 
     body {
         @apply bg-background text-foreground;
+        font-family: 'Funnel Display', sans-serif;
     }
 
     @font-face {
-        font-family: "Funnel Display", serif;
+        font-family: 'Funnel Display', sans-serif;
         font-style: normal;
         font-weight: 300 800;
         src: url(/fonts/geist.woff2) format("woff2");
     }
 
     @font-face {
-        font-family: "Funnel Display", serif;
+        font-family: 'Funnel Display', sans-serif;
         font-style: normal;
         font-weight: 300 800;
         src: url(/fonts/geist-mono.woff2) format("woff2");
