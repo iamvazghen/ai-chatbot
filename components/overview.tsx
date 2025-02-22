@@ -23,17 +23,17 @@ export const Overview = () => {
           This is a{' '}
           <Link
             className="font-medium underline underline-offset-4"
-            href="https://github.com/vercel/ai-chatbot"
+            href="advi.chat"
             target="_blank"
           >
-            chatbot developed by Advi
+            chatbot application developed by Advi
           </Link>{' '}
         </p>
         <p>
           You can learn more about our products by visiting the{' '}
           <Link
             className="font-medium underline underline-offset-4"
-            href="https://sdk.vercel.ai/docs"
+            href="advi.chat"
             target="_blank"
           >
             main page
