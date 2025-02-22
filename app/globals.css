@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -33,9 +32,8 @@
         --popover-foreground: 240 10% 3.9%;
         --primary: 240 5.9% 10%;
         --primary-foreground: 0 0% 98%;
-        /* Updated secondary colors to use purple for the light theme */
-        --secondary: 270 60% 40%;
-        --secondary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
         --muted: 240 4.8% 95.9%;
         --muted-foreground: 240 3.8% 46.1%;
         --accent: 240 4.8% 95.9%;
@@ -103,20 +101,19 @@
 
     body {
         @apply bg-background text-foreground;
-        font-family: 'Funnel Display', sans-serif;
     }
 
     @font-face {
-        font-family: 'geist', sans-serif;
+        font-family: "geist";
         font-style: normal;
-        font-weight: 300 800;
+        font-weight: 100 900;
         src: url(/fonts/geist.woff2) format("woff2");
     }
 
     @font-face {
-        font-family: 'geist-mono', sans-serif;
+        font-family: "geist-mono";
         font-style: normal;
-        font-weight: 300 800;
+        font-weight: 100 900;
         src: url(/fonts/geist-mono.woff2) format("woff2");
     }
 }
