@@ -73,7 +73,7 @@ function PureChatHeader({
       >
         <Link
           href="https://www.advi.chat"
-          target="_noblank"
+          target="_blank"
         >
           Become an Affiliate
         </Link>
