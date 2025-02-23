@@ -23,7 +23,7 @@ export const Overview = () => {
           This is a{' '}
           <Link
             className="font-medium underline underline-offset-4"
-            href="advi.chat"
+            href="https://www.advi.chat"
             target="_blank"
           >
             chatbot application developed by Advi
@@ -33,7 +33,7 @@ export const Overview = () => {
           You can learn more about our products by visiting the{' '}
           <Link
             className="font-medium underline underline-offset-4"
-            href="advi.chat"
+            href="https://www.advi.chat"
             target="_blank"
           >
             main page
