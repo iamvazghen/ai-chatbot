@@ -38,6 +38,11 @@ export const myProvider = customProvider({
     'small-model': openai.image('dall-e-2'),
     'large-model': openai.image('dall-e-3'),
   },
+  embeddingsModels: {
+    'text-embedding-3-large': openai.embeddings('text-embedding-3-large'),
+    'text-embedding-3-small': openai.embeddings('text-embedding-3-small'),
+    'text-embedding-ada-002': openai.embeddings('text-embedding-ada-002'),
+  }
 });
 
 interface ChatModel {
